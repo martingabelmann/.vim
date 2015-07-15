@@ -11,6 +11,8 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'tomasr/molokai'
 
+Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+
 call vundle#end()
 
 filetype plugin indent on
@@ -18,7 +20,11 @@ filetype plugin indent on
 colorscheme molokai
 
 set grepprg=grep\ -nH\ $*
-let g:tex_flavor = "latex"
 syntax on
+
+set laststatus=2
+set encoding=utf-8
+set t_Co=256
+let g:Powerline_symbols = 'fancy'
 
 nmap <F8> :TagbarToggle<CR>
