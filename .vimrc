@@ -46,4 +46,11 @@ set encoding=utf-8
 set t_Co=256
 let g:Powerline_symbols = 'fancy'
 
+"Tabbing
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
+
+"Tagbarkey
 nmap <F8> :TagbarToggle<CR>
