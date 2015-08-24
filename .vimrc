@@ -55,3 +55,14 @@ set expandtab
 
 "Tagbarkey
 nmap <F8> :TagbarToggle<CR>
+
+
+"latex (depends on vim-latexsuite package)
+let g:tex_flavor='latex'
+let g:Tex_CompileRule_pdf = 'pdflatex -interaction=nonstopmode $*'
+let g:Tex_DefaultTargetFormat = 'pdf'
+let g:Tex_ViewRule_pdf = 'zathura'
+
+
+
+
