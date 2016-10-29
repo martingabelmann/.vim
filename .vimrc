@@ -19,7 +19,7 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'majutsushi/tagbar'
 Plugin 'tomasr/molokai'
-
+Plugin 'lervag/vimtex'
 Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 call vundle#end()
@@ -46,6 +46,19 @@ set encoding=utf-8
 set t_Co=256
 let g:Powerline_symbols = 'fancy'
 
+"Toggle intendation for copynpaste
+nnoremap <F2> :set invpaste paste?<CR>
+set pastetoggle=<F2>
+set showmode
+
+"Undo
+set undodir=~/.vim/undodir
+set undofile
+set undolevels=100 "maximum number of changes that can be undone
+set undoreload=1000 "maximum number lines to save for undo on a buffer
+
+" create undodir and backup dir
+silent !mkdir ~/.vim/{backup,undodir}> /dev/null 2>&1
 
 "Tabbing
 set tabstop=4
@@ -62,7 +75,10 @@ let g:tex_flavor='latex'
 let g:Tex_CompileRule_pdf = 'pdflatex -interaction=nonstopmode $*'
 let g:Tex_DefaultTargetFormat = 'pdf'
 let g:Tex_ViewRule_pdf = 'zathura'
-
+let g:Tex_SmartKeyBS = 0
+let g:Tex_SmartKeyQuote = 0
+let g:Tex_SmartKeyDot = 0
+let g:Imap_UsePlaceHolders = 0
 
 
 
