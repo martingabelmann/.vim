@@ -23,6 +23,7 @@ Plugin 'lervag/vimtex'
 Plugin 'scrooloose/syntastic'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'ctrlp.vim'
 Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 call vundle#end()
@@ -42,6 +43,7 @@ colorscheme molokai
 set grepprg=grep\ -nH\ $*
 syntax on
 
+let mapleader = ";"
 
 "powerline-requirements
 set laststatus=2
@@ -97,3 +99,6 @@ let g:syntastic_yaml_checkers = ['yamllint']
 let g:gitgutter_realtime = 1
 let g:gitgutter_eager = 1
 let g:gitgutter_map_keys = 0
+
+"fuzzy finder
+let g:ctrlp_map = '<leader>f'
