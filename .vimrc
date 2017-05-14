@@ -21,6 +21,8 @@ Plugin 'majutsushi/tagbar'
 Plugin 'tomasr/molokai'
 Plugin 'lervag/vimtex'
 Plugin 'scrooloose/syntastic'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'nathanaelkane/vim-indent-guides'
 Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 call vundle#end()
@@ -91,3 +93,7 @@ let g:syntastic_warning_symbol = '!'
 let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_yaml_checkers = ['yamllint']
 
+"gitgutter
+let g:gitgutter_realtime = 1
+let g:gitgutter_eager = 1
+let g:gitgutter_map_keys = 0
