@@ -1,0 +1,9 @@
+---
+extends: default
+
+rules:
+  comments-indentation: disable
+  comments:
+    level: warning
+    require-starting-space: false
+    min-spaces-from-content: 0

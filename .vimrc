@@ -93,7 +93,9 @@ let g:syntastic_check_on_wq = 1
 let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '!'
 let g:syntastic_python_checkers = ['flake8']
+let g:syntastic_python_flake8_args='--ignore=E501,E221,E261,E302,E241,E231,E126,E203,E123'
 let g:syntastic_yaml_checkers = ['yamllint']
+let g:syntastic_yaml_yamllint_args = '-c ~/.vim/yamllint'
 nnoremap <leader>ln :lnext<CR>
 nnoremap <leader>lp :lprevious<CR>
 
