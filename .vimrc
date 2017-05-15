@@ -94,6 +94,8 @@ let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '!'
 let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_yaml_checkers = ['yamllint']
+nnoremap <leader>ln :lnext<CR>
+nnoremap <leader>lp :lprevious<CR>
 
 "gitgutter
 let g:gitgutter_realtime = 1
