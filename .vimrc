@@ -25,6 +25,8 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'fugitive.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'ctrlp.vim'
+Plugin 'junegunn/fzf',  { 'do': './install --all' }
+Plugin 'junegunn/fzf.vim'
 Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 call vundle#end()
@@ -94,7 +96,7 @@ let g:syntastic_check_on_wq = 1
 let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '!'
 let g:syntastic_python_checkers = ['flake8']
-let g:syntastic_python_flake8_args='--ignore=E501,E221,E261,E302,E241,E231,E126,E203,E123,E226,E201,E202,E226,W503,E228,E128,E122,E251'
+let g:syntastic_python_flake8_args='--builtins=FileNotFoundError --ignore=E501,E221,E261,E302,E241,E231,E126,E203,E123,E226,E201,E202,E226,W503,E228,E128,E122,E251'
 let g:syntastic_yaml_checkers = ['yamllint']
 nnoremap <leader>ln :lnext<CR>
 nnoremap <leader>lp :lprevious<CR>
@@ -106,3 +108,5 @@ let g:gitgutter_map_keys = 0
 
 "fuzzy finder
 let g:ctrlp_map = '<leader>f'
+
+":au BufAdd,BufNewFile,BufRead * nested tab sball
