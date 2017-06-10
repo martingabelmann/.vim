@@ -1,6 +1,16 @@
-# vim
+# vim configs
 
-use ln -s ~/.vim/.vimrc ~/.vimrc
+thanks to
 
-
-thanks to https://github.com/powerline/powerline
+  * gmarik/Vundle
+  * majutsushi/tagbar
+  * tomasr/molokai
+  * lervag/vimtex
+  * scrooloose/syntastic
+  * airblade/vim-gitgutter
+  * fugitive.vim
+  * nathanaelkane/vim-indent-guides
+  * ctrlp.vim
+  * junegunn/fzf
+  * junegunn/fzf.vim'
+  * powerline/powerline
