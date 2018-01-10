@@ -18,6 +18,7 @@ Plugin 'gmarik/Vundle.vim'
 
 
 Plugin 'majutsushi/tagbar'
+Plugin 'ervandew/supertab'
 Plugin 'tomasr/molokai'
 Plugin 'lervag/vimtex'
 Plugin 'scrooloose/syntastic'
@@ -82,7 +83,16 @@ nmap <F8> :TagbarToggle<CR>
 let g:tex_flavor='latex'
 let g:Tex_CompileRule_pdf = 'pdflatex -interaction=nonstopmode $*'
 let g:Tex_DefaultTargetFormat = 'pdf'
-let g:Tex_ViewRule_pdf = 'zathura'
+let g:vimtex_compiler_latexmk = {'callback' : 0}
+let g:vimtex_view_automatic = 1
+let g:vimtex_view_method = 'general'
+let g:vimtex_view_general_viewer = 'okular'
+let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
+let g:vimtex_view_general_options_latexmk = '--unique'
+let g:vimtex_complete_close_braces = 1
+let g:vimtex_complete_enabled = 1
+set completeopt=longest,menuone
+
 let g:Tex_SmartKeyBS = 0
 let g:Tex_SmartKeyQuote = 0
 let g:Tex_SmartKeyDot = 0
@@ -98,6 +108,8 @@ let g:syntastic_warning_symbol = '!'
 let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_python_flake8_args='--builtins=FileNotFoundError --ignore=E501,E221,E261,E302,E241,E231,E126,E203,E123,E226,E201,E202,E226,W503,E228,E128,E122,E251'
 let g:syntastic_yaml_checkers = ['yamllint']
+let g:syntastic_tex_checkers = ['chktex']
+let g:syntastic_tex_chktex_args = '-n'
 nnoremap <leader>ln :lnext<CR>
 nnoremap <leader>lp :lprevious<CR>
 
